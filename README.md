@@ -16,5 +16,5 @@ Para iniciar o projeto é necessário realizar o clone deste repositório
 
 ## Requisitos do projeto
 
-1. Administrar e apoiar a fiscalização: 
+1. Administrar e apoiar a fiscalização: Yes
 
