@@ -1,0 +1,2 @@
+ALTER TABLE usuario
+ADD CONSTRAINT Un_cpf UNIQUE(cpf);

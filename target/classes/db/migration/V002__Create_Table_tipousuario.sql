@@ -1,0 +1,5 @@
+CREATE TABLE tipousuario(
+    id INT AUTO_INCREMENT,
+    descricao VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id)
+)  ENGINE=INNODB;
