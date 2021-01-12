@@ -54,6 +54,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 		.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint()).and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 		.authorizeRequests().antMatchers("/auth/**").permitAll()
+		.antMatchers("/emitente").permitAll()
 		.anyRequest().authenticated()
 		.and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService,usuarioRepository), UsernamePasswordAuthenticationFilter.class);
 	}

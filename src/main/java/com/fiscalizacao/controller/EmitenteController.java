@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fiscalizacao.exceptionHandler.CNPJInvalidoException;
+import com.fiscalizacao.exceptionHandler.CNPJexisteException;
 import com.fiscalizacao.models.Emitente;
 import com.fiscalizacao.repository.EmitenteRepository;
 import com.fiscalizacao.service.EmitenteService;
@@ -44,7 +46,7 @@ public class EmitenteController {
 	}
 
 	@PostMapping
-	public ResponseEntity<Emitente> cadastrarEmitente(@Valid @RequestBody Emitente emitente){
+	public ResponseEntity<Emitente> cadastrarEmitente(@Valid @RequestBody Emitente emitente) throws CNPJInvalidoException, CNPJexisteException{
 		Emitente novo = emitenteService.salvaEmitente(emitente);
        return ResponseEntity.ok(novo);
 	}

@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author Giovani de Souza Bueno
+ * @author Giliardi de Souza Bueno
  */
 
 @Configuration

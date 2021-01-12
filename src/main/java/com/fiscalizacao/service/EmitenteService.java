@@ -2,7 +2,6 @@ package com.fiscalizacao.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.fiscalizacao.models.Emitente;
 import com.fiscalizacao.repository.EmitenteRepository;
 import com.fiscalizacao.validate.EmitenteValidate;
@@ -28,11 +27,14 @@ public class EmitenteService {
 	
 	public Emitente salvaEmitente(Emitente emitente){
 		Emitente novoEmitente = new Emitente();
-	   try {
-		   novoEmitente = emitenteRepository.save(emitente);	
-	   } catch (Exception e) {
-		e.printStackTrace();
-	}
+		  
+	          try {
+		           novoEmitente = emitenteRepository.save(emitente);	
+		           
+	              } catch (Exception e) {
+	            	  e.printStackTrace();
+	          }
+		 
 	   return novoEmitente;
 	}
 	

@@ -7,7 +7,11 @@ public enum Errors {
     ERRO_2("CPF informado é inválido"),
 	ERRO_99("Erro inexperado"),
 	ERRO_3("Já existe um emitente cadastrado!!"),
-	ERRO_4("Emitente já cadastrado!");
+	ERRO_4("Emitente já cadastrado!"),
+	ERRO_5("CNPJ já cadastrado!"),
+	ERRO_6("CNPJ INVALIDO!"),
+	ERRO_7("Falta informar o paramentro: %s "),
+	ERRO_8("Usuário informado não encontrado");
     // @formatter:on
 
     private String errorCode;
